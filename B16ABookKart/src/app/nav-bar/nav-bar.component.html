@@ -1,0 +1,28 @@
+<mat-toolbar color="primary" class="mat-elevation-z10">
+  <div class="logo">
+    <a mat-button href="/homepage"><span style="font-size: 20px;">
+      <mat-icon style="padding-top: 10px">book</mat-icon>Book Cart
+    </span></a>
+  </div>
+  <app-searchbox></app-searchbox>
+  
+  <div class="buttons_section">
+    <a mat-button>
+      <mat-icon class="mat-badge-warn" matBadge="{{favorites_count}}" madBadgeColor="warn" routerLink="wish_list">favorite</mat-icon>
+    </a>
+    <a mat-button>
+      <mat-icon class="mat-badge-warn" matBadge="{{cart_count}}" madBadgeColor="warn" routerLink="shopping_cart">shopping_cart</mat-icon>
+    </a>
+    <a mat-button routerLink="login">Login</a>
+    <div class="btn-group" dropdown>
+      <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+        aria-controls="dropdown-basic">
+        User
+      </button>
+      <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+        <li role="menuitem"><a class="dropdown-item" href="#">My Orders</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,10 @@
+<div class="search-container">
+    <form action="/action_page.php">
+        <input type="text" placeholder="Search books or authors" name="search" [formControl]="searchBox" (keyup)="search($event)">
+        <mat-autocomplete (optionSelected)="search($event)">
+            <mat-option *ngFor="let book of searchResults" [value]="book">
+              {{book}}
+            </mat-option>
+          </mat-autocomplete>
+    </form>
+</div>
