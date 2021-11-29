@@ -1,6 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import {Observable} from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
+
+export interface Book {
+  bookId: number;
+  title: string;
+  author: string;
+  category: string;
+  price: number;
+  coverFileName: string;
+}
 
 @Component({
   selector: 'app-searchbox',
@@ -8,13 +19,17 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./searchbox.component.scss']
 })
 export class SearchboxComponent implements OnInit {
-  searchResults = [];
-  allBooks = [];
+  allBooks : Book[] = [];
+  searchResults !: Observable<Book[]>;
   searchBox = new FormControl();
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.loadAllBooks();
+    
+    this.searchResults = this.searchBox.valueChanges.pipe(
+      map(name => (name ? this._filter(name) : this.allBooks.slice())),
+    );
   }
 
   loadAllBooks() {
@@ -23,11 +38,16 @@ export class SearchboxComponent implements OnInit {
     })
   }
 
-  search(event: any) {
-    let searchQuery = this.searchBox.value;
-    this.searchResults = this.allBooks?.filter((option: any) => option.title.toLowerCase().includes(searchQuery)
-      || option.author.toLowerCase().includes(searchQuery));
-    console.log("Results:", this.searchResults);
+  displayFn(book: Book): string {
+    return book && book.title ? book.title : '';
   }
+
+  private _filter(title: string): Book[] {
+    const searchQuery = title.toLowerCase();
+
+    return this.allBooks?.filter((option: any) => option.title.toLowerCase().includes(searchQuery)
+    || option.author.toLowerCase().includes(searchQuery));
+  }
+
 
 }

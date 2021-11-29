@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bookKartB14A": {
+    "B16ABookKart": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bookKartB14A",
+            "outputPath": "dist/B16ABookKart",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "bookKartB14A:build"
+            "browserTarget": "B16ABookKart:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "bookKartB14A:build:production"
+              "browserTarget": "B16ABookKart:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bookKartB14A:build"
+            "browserTarget": "B16ABookKart:build"
           }
         },
         "test": {
@@ -121,16 +121,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "bookKartB14A:serve"
+            "devServerTarget": "B16ABookKart:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "bookKartB14A:serve:production"
+              "devServerTarget": "B16ABookKart:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "bookKartB14A"
+  "defaultProject": "B16ABookKart"
 }

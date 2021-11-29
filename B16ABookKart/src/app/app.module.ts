@@ -20,7 +20,6 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { WishlistComponent } from './wishlist/wishlist.component';
-import { CartlistComponent } from './cartlist/cartlist.component';
 import { DummyLoginComponent } from './dummy-login/dummy-login.component';
 import { SearchboxComponent } from './searchbox/searchbox.component';
 
@@ -29,7 +28,6 @@ import { SearchboxComponent } from './searchbox/searchbox.component';
     AppComponent,
     NavBarComponent,
     WishlistComponent,
-    CartlistComponent,
     DummyLoginComponent,
     SearchboxComponent,
     

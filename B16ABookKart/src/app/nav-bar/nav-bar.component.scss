@@ -5,17 +5,8 @@ mat-toolbar{
   justify-content: space-between;
 }
 
-.search-container{
+app-searchbox{
   width: 30%;
-}
-.search-container input{ 
-  // margin-right: 200px;
-  text-align: left; 
-  // padding-right: 140px; 
-  padding-top: 5px; 
-  padding-bottom: 5px; 
-  font-size: large;
-  width: 100%;
 }
 
 button{

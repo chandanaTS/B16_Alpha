@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CartService } from '../service/cart.service';
 import { WishService } from '../service/wish.service';
 
 @Component({
@@ -13,7 +12,6 @@ export class WishlistComponent implements OnInit {
   constructor(
   
     private router: Router,
-    private cart: CartService,
     private wish: WishService
   ) { }
 
