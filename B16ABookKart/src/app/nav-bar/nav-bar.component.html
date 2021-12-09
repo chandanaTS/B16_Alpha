@@ -4,10 +4,12 @@
       <mat-icon style="padding-top: 10px">book</mat-icon>Book Cart
     </span></a>
   </div>
+
   <app-searchbox></app-searchbox>
+  
   <div class="buttons_section">
     <a mat-button>
-      <mat-icon class="mat-badge-warn" matBadge="{{favorites_count}}" madBadgeColor="warn" routerLink="wish_list">favorite</mat-icon>
+      <mat-icon class="mat-badge-warn" matBadge="{{wishlist_count}}" madBadgeColor="warn" routerLink="wish_list">favorite</mat-icon>
     </a>
     <a mat-button>
       <mat-icon class="mat-badge-warn" matBadge="{{cart_count}}" madBadgeColor="warn" routerLink="shopping_cart">shopping_cart</mat-icon>

@@ -22,6 +22,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { DummyLoginComponent } from './dummy-login/dummy-login.component';
 import { SearchboxComponent } from './searchbox/searchbox.component';
+import { CartlistComponent } from './cartlist/cartlist.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { SearchboxComponent } from './searchbox/searchbox.component';
     WishlistComponent,
     DummyLoginComponent,
     SearchboxComponent,
+    CartlistComponent,
     
   ],
   imports: [
